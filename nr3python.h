@@ -2,7 +2,6 @@
 // version 0.4
 // This file is a version of nr3.h with hooks that
 // make it easy to interface to Python
-// See http://www.nr.com/nr3_python_tutorial.html
 #ifndef _NR3_H_
 #define _NR3_H_
 #ifndef Py_PYTHON_H
