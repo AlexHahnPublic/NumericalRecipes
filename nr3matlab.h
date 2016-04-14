@@ -3,7 +3,6 @@
 // This file is a version of nr3.h with hooks that
 // make it easy to write Matlab mex files, in particular
 // ones that use NR3 routines.
-// See http://www.nr.com/nr3_matlab.html
 
 #include "mex.h"
 
