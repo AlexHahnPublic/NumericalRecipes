@@ -148,7 +148,7 @@ struct NRpyList {
 	}
 };
 int NRpyInt(NRpyList &list) { // cast list to integer value of its 1st element
-	return NRpyInt(PyList_GetItem(list.p,0)); 
+	return NRpyInt(PyList_GetItem(list.p,0));
 }
 // ToDo: also make NRpyList constructors for NRvector and NRmatrix
 
@@ -971,7 +971,7 @@ struct NRpyAnyFunction {
 	T (*cfunc)(U);
 	NRpyPyFunction<T> ftor;
 	Int ispy;
-	
+
 	NRpyAnyFunction(PyObject *ob) {
 		if(PyCallable_Check(ob)) {
 			ispy = 1;

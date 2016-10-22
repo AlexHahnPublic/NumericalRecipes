@@ -119,7 +119,7 @@ template <> inline mxClassID mxT<Bool>() {
 	if (sizeof(Bool)==1) return mxLOGICAL_CLASS;
 	else throw("bool and mxLOGICAL_CLASS have incompatible sizes");
 }
-inline mxClassID mxT(const mxArray *p) {return mxGetClassID(p);} 
+inline mxClassID mxT(const mxArray *p) {return mxGetClassID(p);}
 
 // functions to map Matlab scalars
 
@@ -159,6 +159,8 @@ void mxScalar(T val, const char *varname) {
 
 
 // Vector and Matrix Classes
+//
+// To support an d
 
 template <class T>
 class NRvector {
@@ -183,7 +185,7 @@ public:
 
 	NRvector(const mxArray *prhs); // map Matlab rhs to vector (read-only)
 	NRvector(int n, mxArray* &plhs); // create Matlab lhs and map to vector
-	NRvector(const char *varname); // import Matlab variable by name (read-only)	
+	NRvector(const char *varname); // import Matlab variable by name (read-only)
 	void put(const char *varname); // export vector to a named Matlab variable
 
 };
@@ -357,7 +359,7 @@ public:
 
 	NRmatrix(const mxArray *prhs); // map Matlab rhs to matrix (read-only)
 	NRmatrix(int n, int m, mxArray* &plhs); // create Matlab lhs and map to matrix
-	NRmatrix(const char *varname); // import Matlab variable by name (read-only)	
+	NRmatrix(const char *varname); // import Matlab variable by name (read-only)
 	void put(const char *varname); // export matrix to a named Matlab variable
 
 };
